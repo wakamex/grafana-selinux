@@ -32,7 +32,7 @@ gen_tunable(grafana_can_tcp_connect_mysql_port, false)
 ## Allow grafana to connect to prometheus' default tcp port of 9090
 ## </p>
 ## </desc>
-gen_tunable(grafana_can_tcp_connect_prometheus_port, false)
+gen_tunable(grafana_can_tcp_connect_prometheus_port, true)
 
 
 type grafana_t;
