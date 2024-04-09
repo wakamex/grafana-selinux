@@ -43,6 +43,12 @@ systemctl start grafana-server.service
 
 # Ensure it's working in the proper confinement
 ps -eZ | grep grafana
+
+# Enable Prometheus
+sudo setsebool -P grafana_can_tcp_connect_prometheus_port true
+
+# Ensure Prometheus is enabled
+getsebool grafana_can_tcp_connect_prometheus_port
 ```
 
 ## How To Compile The Module Locally (Needed before installing)
